@@ -61,15 +61,10 @@
 			isa = PBXGroup;
 			children = (
 				D403003D20C8DA37009BBAA7 /* AppDelegate.swift */,
+				D46D926120CF7575009D1573 /* Storyboard */,
+				D46D926220CF758D009D1573 /* Controllers */,
+				D46D926020CF752E009D1573 /* Views */,
 				D46D925920CB7C6E009D1573 /* Supporting Files */,
-				D403003F20C8DA37009BBAA7 /* ViewController.swift */,
-				D403004420C8DA39009BBAA7 /* Assets.xcassets */,
-				D403004120C8DA37009BBAA7 /* Main.storyboard */,
-				D403004620C8DA39009BBAA7 /* LaunchScreen.storyboard */,
-				D403004920C8DA39009BBAA7 /* Info.plist */,
-				D46D925A20CB82D1009D1573 /* TableViewCell.swift */,
-				D46D925C20CB87F2009D1573 /* CollectionViewCell.swift */,
-				D46D925E20CB8F38009D1573 /* MapViewCell.swift */,
 			);
 			path = VisitMinsk;
 			sourceTree = "<group>";
@@ -77,8 +72,37 @@
 		D46D925920CB7C6E009D1573 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				D403004420C8DA39009BBAA7 /* Assets.xcassets */,
+				D403004920C8DA39009BBAA7 /* Info.plist */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		D46D926020CF752E009D1573 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				D46D925A20CB82D1009D1573 /* TableViewCell.swift */,
+				D46D925C20CB87F2009D1573 /* CollectionViewCell.swift */,
+				D46D925E20CB8F38009D1573 /* MapViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		D46D926120CF7575009D1573 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				D403004120C8DA37009BBAA7 /* Main.storyboard */,
+				D403004620C8DA39009BBAA7 /* LaunchScreen.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		D46D926220CF758D009D1573 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				D403003F20C8DA37009BBAA7 /* ViewController.swift */,
+			);
+			path = Controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
