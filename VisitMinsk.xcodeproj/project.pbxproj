@@ -15,6 +15,8 @@
 		D46D925B20CB82D1009D1573 /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D925A20CB82D1009D1573 /* TableViewCell.swift */; };
 		D46D925D20CB87F2009D1573 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D925C20CB87F2009D1573 /* CollectionViewCell.swift */; };
 		D46D925F20CB8F38009D1573 /* MapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D925E20CB8F38009D1573 /* MapViewCell.swift */; };
+		D46D928220CF8B68009D1573 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D928120CF8B68009D1573 /* Place.swift */; };
+		D46D928520CF8E44009D1573 /* PlaceGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D928420CF8E44009D1573 /* PlaceGroup.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +30,8 @@
 		D46D925A20CB82D1009D1573 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		D46D925C20CB87F2009D1573 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		D46D925E20CB8F38009D1573 /* MapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
+		D46D928120CF8B68009D1573 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
+		D46D928420CF8E44009D1573 /* PlaceGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceGroup.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +65,8 @@
 			isa = PBXGroup;
 			children = (
 				D403003D20C8DA37009BBAA7 /* AppDelegate.swift */,
+				D403004920C8DA39009BBAA7 /* Info.plist */,
+				D46D928320CF8B72009D1573 /* Model */,
 				D46D926120CF7575009D1573 /* Storyboard */,
 				D46D926220CF758D009D1573 /* Controllers */,
 				D46D926020CF752E009D1573 /* Views */,
@@ -73,7 +79,6 @@
 			isa = PBXGroup;
 			children = (
 				D403004420C8DA39009BBAA7 /* Assets.xcassets */,
-				D403004920C8DA39009BBAA7 /* Info.plist */,
 			);
 			path = "Supporting Files";
 			sourceTree = "<group>";
@@ -103,6 +108,15 @@
 				D403003F20C8DA37009BBAA7 /* ViewController.swift */,
 			);
 			path = Controllers;
+			sourceTree = "<group>";
+		};
+		D46D928320CF8B72009D1573 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				D46D928120CF8B68009D1573 /* Place.swift */,
+				D46D928420CF8E44009D1573 /* PlaceGroup.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -176,9 +190,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D46D928520CF8E44009D1573 /* PlaceGroup.swift in Sources */,
 				D46D925B20CB82D1009D1573 /* TableViewCell.swift in Sources */,
 				D403004020C8DA37009BBAA7 /* ViewController.swift in Sources */,
 				D46D925F20CB8F38009D1573 /* MapViewCell.swift in Sources */,
+				D46D928220CF8B68009D1573 /* Place.swift in Sources */,
 				D46D925D20CB87F2009D1573 /* CollectionViewCell.swift in Sources */,
 				D403003E20C8DA37009BBAA7 /* AppDelegate.swift in Sources */,
 			);
