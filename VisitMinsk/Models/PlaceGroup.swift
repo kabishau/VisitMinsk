@@ -1,5 +1,7 @@
 import Foundation
 
+
+
 class PlaceGroup {
     
     var title: String
@@ -9,5 +11,6 @@ class PlaceGroup {
         title = named
         places = includePlaces
     }
+
     
 }

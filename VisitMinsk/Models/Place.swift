@@ -1,5 +1,7 @@
 import UIKit
 
+// represent generic place
+
 class Place {
     
     var title: String
@@ -12,7 +14,7 @@ class Place {
         if let image = UIImage(named: imageName) {
             self.image = image
         } else {
-            self.image = UIImage(named: "1_21")
+            self.image = UIImage(named: "1_21")!
         }
     }
 }
