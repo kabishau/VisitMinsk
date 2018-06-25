@@ -66,14 +66,13 @@
 		D403003C20C8DA37009BBAA7 /* VisitMinsk */ = {
 			isa = PBXGroup;
 			children = (
-				D403004920C8DA39009BBAA7 /* Info.plist */,
 				D403003D20C8DA37009BBAA7 /* AppDelegate.swift */,
 				D4DD28AC20DB3023004383BB /* Flows */,
 				D46D928320CF8B72009D1573 /* Models */,
 				D4DD28AD20DB304C004383BB /* Modules */,
 				D46D926020CF752E009D1573 /* Views */,
-				D4DD28B020DB30D8004383BB /* Services */,
 				D4DD28A920DB2FC8004383BB /* Other */,
+				D403004920C8DA39009BBAA7 /* Info.plist */,
 			);
 			path = VisitMinsk;
 			sourceTree = "<group>";
@@ -118,7 +117,6 @@
 			isa = PBXGroup;
 			children = (
 				D4DD28AE20DB307C004383BB /* PlaceList */,
-				D4DD28AF20DB3084004383BB /* PlaceDetail */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -130,20 +128,6 @@
 				D403004120C8DA37009BBAA7 /* Main.storyboard */,
 			);
 			path = PlaceList;
-			sourceTree = "<group>";
-		};
-		D4DD28AF20DB3084004383BB /* PlaceDetail */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = PlaceDetail;
-			sourceTree = "<group>";
-		};
-		D4DD28B020DB30D8004383BB /* Services */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = Services;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
