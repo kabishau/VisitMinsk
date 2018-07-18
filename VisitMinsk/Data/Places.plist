@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>name</key>
+		<string>Church Of Sains Simon and Helena</string>
+		<key>category</key>
+		<string>Visit In The City</string>
+		<key>description</key>
+		<string>The national Academic Grand Opere and Ballet Theatre of the Republic of Belarus is located in a park ...</string>
+		<key>photo</key>
+		<string>Church Of Sains Simon and Helena</string>
+		<key>index</key>
+		<string>0</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Stalin Line</string>
+		<key>category</key>
+		<string>Visit Outside the City</string>
+		<key>description</key>
+		<string>Description of the Stalin Line</string>
+		<key>photo</key>
+		<string>Stalin Line</string>
+		<key>index</key>
+		<string>1</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Holly Spirit</string>
+		<key>category</key>
+		<string>Visit In The City</string>
+		<key>description</key>
+		<string>Description of the Holy Spirit</string>
+		<key>photo</key>
+		<string>Holly Spirit</string>
+		<key>index</key>
+		<string>2</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>National Library</string>
+		<key>category</key>
+		<string>Visit In The City</string>
+		<key>description</key>
+		<string>Description of the National Library</string>
+		<key>photo</key>
+		<string>National Library</string>
+		<key>index</key>
+		<string>3</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>National Opera and Balet Theater</string>
+		<key>category</key>
+		<string>Visit In The City</string>
+		<key>description</key>
+		<string>Description of the National Opera and Balet Theater</string>
+		<key>photo</key>
+		<string>National Opera and Balet Theater</string>
+		<key>index</key>
+		<string>4</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Nesvizh Castle</string>
+		<key>category</key>
+		<string>Visit Outside the City</string>
+		<key>description</key>
+		<string>Description of the Nesvizh Castle</string>
+		<key>photo</key>
+		<string>Nesvizh Castle</string>
+		<key>index</key>
+		<string>5</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>The Mir Castle Complex</string>
+		<key>category</key>
+		<string>Visit Outside the City</string>
+		<key>description</key>
+		<string>Description ot The Mir Castle Complex</string>
+		<key>photo</key>
+		<string>The Mir Castle Complex</string>
+		<key>index</key>
+		<string>6</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Denali National Park</string>
+		<key>category</key>
+		<string>Food</string>
+		<key>description</key>
+		<string>Description of the Denali National Park</string>
+		<key>photo</key>
+		<string>Denali National Park</string>
+		<key>index</key>
+		<string>7</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Katmai National Park</string>
+		<key>category</key>
+		<string>Food</string>
+		<key>description</key>
+		<string>Description of the Katmai National Park</string>
+		<key>photo</key>
+		<string>Katmai National Park</string>
+		<key>index</key>
+		<string>8</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Kenai Fjords National Park</string>
+		<key>category</key>
+		<string>Food</string>
+		<key>description</key>
+		<string>Description Kenai Fjords National Park</string>
+		<key>photo</key>
+		<string>Kenai Fjords National Park</string>
+		<key>index</key>
+		<string>9</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Joshua Tree National Park</string>
+		<key>category</key>
+		<string>In City</string>
+		<key>description</key>
+		<string>Description of the Joshua Tree National Park</string>
+		<key>photo</key>
+		<string>Joshua Tree National Park</string>
+		<key>index</key>
+		<string>10</string>
+	</dict>
+	<dict>
+		<key>name</key>
+		<string>Sequoia National Park</string>
+		<key>category</key>
+		<string>Food</string>
+		<key>description</key>
+		<string>Description of the Sequoia National Park</string>
+		<key>photo</key>
+		<string>Sequoia National Park</string>
+		<key>index</key>
+		<string>11</string>
+	</dict>
+</array>
+</plist>

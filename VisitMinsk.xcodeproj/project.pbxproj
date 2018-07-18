@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BEDD9AC20FFC7CD003CA67F /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDD9AB20FFC7CD003CA67F /* Places.plist */; };
 		D403003E20C8DA37009BBAA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403003D20C8DA37009BBAA7 /* AppDelegate.swift */; };
 		D403004020C8DA37009BBAA7 /* PlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403003F20C8DA37009BBAA7 /* PlaceList.swift */; };
 		D403004320C8DA37009BBAA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D403004120C8DA37009BBAA7 /* Main.storyboard */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BEDD9AB20FFC7CD003CA67F /* Places.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Places.plist; sourceTree = "<group>"; };
 		D403003A20C8DA37009BBAA7 /* VisitMinsk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitMinsk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D403003D20C8DA37009BBAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D403003F20C8DA37009BBAA7 /* PlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceList.swift; sourceTree = "<group>"; };
@@ -49,6 +51,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		6BEDD9AA20FFC772003CA67F /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				6BEDD9AB20FFC7CD003CA67F /* Places.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		D403003120C8DA37009BBAA7 = {
 			isa = PBXGroup;
 			children = (
@@ -68,6 +78,7 @@
 		D403003C20C8DA37009BBAA7 /* VisitMinsk */ = {
 			isa = PBXGroup;
 			children = (
+				6BEDD9AA20FFC772003CA67F /* Data */,
 				D403003D20C8DA37009BBAA7 /* AppDelegate.swift */,
 				D46D928120CF8B68009D1573 /* Place.swift */,
 				D46D928420CF8E44009D1573 /* PlaceGroup.swift */,
@@ -144,6 +155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D403004820C8DA39009BBAA7 /* LaunchScreen.storyboard in Resources */,
+				6BEDD9AC20FFC7CD003CA67F /* Places.plist in Resources */,
 				D403004520C8DA39009BBAA7 /* Assets.xcassets in Resources */,
 				D403004320C8DA37009BBAA7 /* Main.storyboard in Resources */,
 				D4DD290420E1E2A1004383BB /* HeaderView.xib in Resources */,
