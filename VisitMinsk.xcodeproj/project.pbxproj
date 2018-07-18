@@ -17,7 +17,6 @@
 		D46D925F20CB8F38009D1573 /* MapViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D925E20CB8F38009D1573 /* MapViewCell.swift */; };
 		D46D928220CF8B68009D1573 /* Place.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D928120CF8B68009D1573 /* Place.swift */; };
 		D46D928520CF8E44009D1573 /* PlaceGroup.swift in Sources */ = {isa = PBXBuildFile; fileRef = D46D928420CF8E44009D1573 /* PlaceGroup.swift */; };
-		D4DD28AB20DB301E004383BB /* PlaceFlow.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD28AA20DB301E004383BB /* PlaceFlow.swift */; };
 		D4DD290320E1E2A1004383BB /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D4DD290120E1E2A1004383BB /* HeaderView.swift */; };
 		D4DD290420E1E2A1004383BB /* HeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = D4DD290220E1E2A1004383BB /* HeaderView.xib */; };
 /* End PBXBuildFile section */
@@ -27,7 +26,7 @@
 		D403003D20C8DA37009BBAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D403003F20C8DA37009BBAA7 /* PlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceList.swift; sourceTree = "<group>"; };
 		D403004220C8DA37009BBAA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		D403004420C8DA39009BBAA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D403004420C8DA39009BBAA7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Other/Assets.xcassets; sourceTree = "<group>"; };
 		D403004720C8DA39009BBAA7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D403004920C8DA39009BBAA7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D46D925A20CB82D1009D1573 /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
@@ -35,7 +34,6 @@
 		D46D925E20CB8F38009D1573 /* MapViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewCell.swift; sourceTree = "<group>"; };
 		D46D928120CF8B68009D1573 /* Place.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Place.swift; sourceTree = "<group>"; };
 		D46D928420CF8E44009D1573 /* PlaceGroup.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceGroup.swift; sourceTree = "<group>"; };
-		D4DD28AA20DB301E004383BB /* PlaceFlow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceFlow.swift; sourceTree = "<group>"; };
 		D4DD290120E1E2A1004383BB /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		D4DD290220E1E2A1004383BB /* HeaderView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeaderView.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -71,69 +69,20 @@
 			isa = PBXGroup;
 			children = (
 				D403003D20C8DA37009BBAA7 /* AppDelegate.swift */,
-				D4DD28AC20DB3023004383BB /* Flows */,
-				D46D928320CF8B72009D1573 /* Models */,
-				D4DD28AD20DB304C004383BB /* Modules */,
-				D46D926020CF752E009D1573 /* Views */,
-				D4DD28A920DB2FC8004383BB /* Other */,
-				D403004920C8DA39009BBAA7 /* Info.plist */,
-			);
-			path = VisitMinsk;
-			sourceTree = "<group>";
-		};
-		D46D926020CF752E009D1573 /* Views */ = {
-			isa = PBXGroup;
-			children = (
-				D46D925A20CB82D1009D1573 /* TableViewCell.swift */,
-				D46D925C20CB87F2009D1573 /* CollectionViewCell.swift */,
-				D46D925E20CB8F38009D1573 /* MapViewCell.swift */,
-			);
-			path = Views;
-			sourceTree = "<group>";
-		};
-		D46D928320CF8B72009D1573 /* Models */ = {
-			isa = PBXGroup;
-			children = (
 				D46D928120CF8B68009D1573 /* Place.swift */,
 				D46D928420CF8E44009D1573 /* PlaceGroup.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		D4DD28A920DB2FC8004383BB /* Other */ = {
-			isa = PBXGroup;
-			children = (
-				D403004620C8DA39009BBAA7 /* LaunchScreen.storyboard */,
-				D403004420C8DA39009BBAA7 /* Assets.xcassets */,
-			);
-			path = Other;
-			sourceTree = "<group>";
-		};
-		D4DD28AC20DB3023004383BB /* Flows */ = {
-			isa = PBXGroup;
-			children = (
-				D4DD28AA20DB301E004383BB /* PlaceFlow.swift */,
-			);
-			path = Flows;
-			sourceTree = "<group>";
-		};
-		D4DD28AD20DB304C004383BB /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				D4DD28AE20DB307C004383BB /* PlaceList */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		D4DD28AE20DB307C004383BB /* PlaceList */ = {
-			isa = PBXGroup;
-			children = (
 				D403003F20C8DA37009BBAA7 /* PlaceList.swift */,
 				D403004120C8DA37009BBAA7 /* Main.storyboard */,
 				D4DD290120E1E2A1004383BB /* HeaderView.swift */,
 				D4DD290220E1E2A1004383BB /* HeaderView.xib */,
+				D46D925A20CB82D1009D1573 /* TableViewCell.swift */,
+				D46D925C20CB87F2009D1573 /* CollectionViewCell.swift */,
+				D46D925E20CB8F38009D1573 /* MapViewCell.swift */,
+				D403004420C8DA39009BBAA7 /* Assets.xcassets */,
+				D403004620C8DA39009BBAA7 /* LaunchScreen.storyboard */,
+				D403004920C8DA39009BBAA7 /* Info.plist */,
 			);
-			path = PlaceList;
+			path = VisitMinsk;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -216,7 +165,6 @@
 				D46D928220CF8B68009D1573 /* Place.swift in Sources */,
 				D46D925D20CB87F2009D1573 /* CollectionViewCell.swift in Sources */,
 				D403003E20C8DA37009BBAA7 /* AppDelegate.swift in Sources */,
-				D4DD28AB20DB301E004383BB /* PlaceFlow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
