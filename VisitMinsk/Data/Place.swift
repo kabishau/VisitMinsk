@@ -10,11 +10,13 @@ class Place {
     var photo: String
     var index: Int
     
-    init(name: String, category: String, description: String, description: String, photo: String, index: Int) {
+    init(name: String, category: String, description: String, photo: String, index: Int) {
         self.name = name
         self.category = category
         self.description = description
         self.photo = photo
         self.index = index
     }
+    
+    // do I need convenience init in this app?
 }

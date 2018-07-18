@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		6BEDD9AC20FFC7CD003CA67F /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDD9AB20FFC7CD003CA67F /* Places.plist */; };
 		6BEDD9AF20FFE0D5003CA67F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDD9AE20FFE0D5003CA67F /* GradientView.swift */; };
+		6BEDD9B420FFF6E5003CA67F /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDD9B320FFF6E5003CA67F /* DataSource.swift */; };
 		D403003E20C8DA37009BBAA7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403003D20C8DA37009BBAA7 /* AppDelegate.swift */; };
 		D403004020C8DA37009BBAA7 /* PlaceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = D403003F20C8DA37009BBAA7 /* PlaceList.swift */; };
 		D403004320C8DA37009BBAA7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D403004120C8DA37009BBAA7 /* Main.storyboard */; };
@@ -26,6 +27,7 @@
 /* Begin PBXFileReference section */
 		6BEDD9AB20FFC7CD003CA67F /* Places.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Places.plist; sourceTree = "<group>"; };
 		6BEDD9AE20FFE0D5003CA67F /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
+		6BEDD9B320FFF6E5003CA67F /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
 		D403003A20C8DA37009BBAA7 /* VisitMinsk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitMinsk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D403003D20C8DA37009BBAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D403003F20C8DA37009BBAA7 /* PlaceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlaceList.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 			children = (
 				6BEDD9AB20FFC7CD003CA67F /* Places.plist */,
 				D46D928120CF8B68009D1573 /* Place.swift */,
+				6BEDD9B320FFF6E5003CA67F /* DataSource.swift */,
 			);
 			path = Data;
 			sourceTree = "<group>";
@@ -212,6 +215,7 @@
 				D46D928220CF8B68009D1573 /* Place.swift in Sources */,
 				D46D925D20CB87F2009D1573 /* CollectionViewCell.swift in Sources */,
 				D403003E20C8DA37009BBAA7 /* AppDelegate.swift in Sources */,
+				6BEDD9B420FFF6E5003CA67F /* DataSource.swift in Sources */,
 				6BEDD9AF20FFE0D5003CA67F /* GradientView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
