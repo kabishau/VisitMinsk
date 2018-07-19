@@ -2,7 +2,7 @@ import UIKit
 
 var headerHeight: CGFloat = 24.0
 
-class PlaceListViewController: UIViewController {
+class MainViewController: UIViewController {
     
    var images = ["1_Church_Of_Sains_Simon_and_Helena_visit_in", "2_Church_Of_Sains_Simon_and_Helena_visit_in", "3_Church_Of_Sains_Simon_and_Helena_visit_in", "4_Church_Of_Sains_Simon_and_Helena_visit_in", "5_Church_Of_Sains_Simon_and_Helena_visit_in"]
     
@@ -21,7 +21,7 @@ class PlaceListViewController: UIViewController {
 }
 
 
-extension PlaceListViewController: UITableViewDataSource, UITableViewDelegate {
+extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
         return categories.count
@@ -54,7 +54,7 @@ extension PlaceListViewController: UITableViewDataSource, UITableViewDelegate {
     }
 }
 
-extension PlaceListViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return images.count
     }
