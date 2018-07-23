@@ -2,18 +2,32 @@ import Foundation
 
 class DataSource {
     
-    private var places = [Place]()
-    private var categories = [String]()
+    var places = [Place]()
+    var sections = [String]()
     
     var count: Int {
         return places.count
     }
     
-    var numberOfCategories: Int {
-        return categories.count
+    var numberOfSections: Int {
+        return sections.count
     }
     
-    // MARK: - Private
+    init() {
+        places = loadPlacesFromDisk()
+    }
+    
+
+    
+    func placeForItemAtIndexPath(_ indexPath: IndexPath) -> Place? {
+        if indexPath.section > 0 {
+            let minskPlaces = placesForSection(indexPath.section)
+            return minskPlaces[indexPath.item]
+        } else {
+            return places[indexPath.item]
+        }
+    }
+    
     private func loadPlacesFromDisk() -> [Place] {
         
         // why do I need this?
@@ -31,6 +45,11 @@ class DataSource {
                         let index = dictionary["index"] as! Int
                         let place = Place(name: name, category: category, description: description, photo: photo, index: index)
                         
+                        // appending sections array with unique values
+                        if !sections.contains(category) {
+                            sections.append(category)
+                        }
+                        
                         minskPlaces.append(place)
                     }
                 }
@@ -38,6 +57,19 @@ class DataSource {
             }
         }
         return []
+    }
+    
+    private func placesForSection(_ index: Int) -> [Place] {
+        let section = sections[index]
+        let placesInSection = places.filter { (place: Place) -> Bool in
+            return place.category == section
+        }
+        return placesInSection
+    }
+    
+    func numberOfPlacesForSection(_ index: Int) -> Int {
+        let minskPlaces = placesForSection(index)
+        return minskPlaces.count
     }
     
     

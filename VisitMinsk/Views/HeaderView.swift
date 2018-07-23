@@ -2,9 +2,8 @@ import UIKit
 
 class HeaderView: UITableViewCell {
 
-    @IBOutlet weak var categoryNameLabel: UILabel!
+    @IBOutlet weak var sectionNameLabel: UILabel!
     @IBOutlet weak var seeAllButton: UIButton!
-    
     @IBAction func seeAllButtonTapped(_ sender: Any) {
         
     }

@@ -4,12 +4,8 @@ var headerHeight: CGFloat = 24.0
 
 class MainViewController: UIViewController {
     
-   var images = ["1_Church_Of_Sains_Simon_and_Helena_visit_in", "2_Church_Of_Sains_Simon_and_Helena_visit_in", "3_Church_Of_Sains_Simon_and_Helena_visit_in", "4_Church_Of_Sains_Simon_and_Helena_visit_in", "5_Church_Of_Sains_Simon_and_Helena_visit_in"]
-    
-    var categories = ["VISIT IN THE CITY", "VISIT OUTSIDE THE CITY", "FOOD"]
-    
-    
-    
+    let dataSource = DataSource()
+
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -24,7 +20,7 @@ class MainViewController: UIViewController {
 extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        return categories.count
+        return dataSource.numberOfSections
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -33,48 +29,62 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         let headerView = Bundle.main.loadNibNamed("HeaderView", owner: self, options: nil)?.first as! HeaderView
-        headerView.categoryNameLabel.text = categories[section]
+        headerView.sectionNameLabel.text = dataSource.sections[section]
         
         return headerView
     }
 
-//    func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
-//        return "\(categories[section])"
-//    }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 1
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! PlaceCategoryTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SectionTableViewCell
         
         return cell
 
     }
 }
 
-extension MainViewController: UICollectionViewDelegate, UICollectionViewDataSource {
+class SectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
+    
+    private let dataSource = DataSource()
+    @IBOutlet weak var collectionView: UICollectionView!
+    
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return images.count
+        return dataSource.numberOfPlacesForSection(section)
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! PlaceCollectionViewCell
-        cell.imageView.image = UIImage(named: images[indexPath.row])
         
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionViewCell
+        
+        let items = dataSource.sections[indexPath.section]
+        
+        cell.place = dataSource.placeForItemAtIndexPath(indexPath)
         return cell
     }
-}
-
-
-class PlaceCategoryTableViewCell: UITableViewCell {
     
-    @IBOutlet weak var collectionView: UICollectionView!
     
 }
 
-class PlaceCollectionViewCell: UICollectionViewCell {
+class CollectionViewCell: UICollectionViewCell {
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var titleLabel: UILabel!
     
+    var place: Place? {
+        didSet {
+            if let place = place {
+                imageView.image = UIImage(named: place.name)
+                titleLabel.text = place.name
+            }
+        }
+    }
+    
+    // do I really need this?
+//    override func prepareForReuse() {
+//        imageView.image = nil
+//    }
+
 }

@@ -12,7 +12,7 @@
 		<key>photo</key>
 		<string>Church Of Sains Simon and Helena</string>
 		<key>index</key>
-		<string>0</string>
+		<integer>0</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -24,7 +24,7 @@
 		<key>photo</key>
 		<string>Stalin Line</string>
 		<key>index</key>
-		<string>1</string>
+		<integer>1</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -36,7 +36,7 @@
 		<key>photo</key>
 		<string>Holly Spirit</string>
 		<key>index</key>
-		<string>2</string>
+		<integer>2</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -48,7 +48,7 @@
 		<key>photo</key>
 		<string>National Library</string>
 		<key>index</key>
-		<string>3</string>
+		<integer>3</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -60,7 +60,7 @@
 		<key>photo</key>
 		<string>National Opera and Balet Theater</string>
 		<key>index</key>
-		<string>4</string>
+		<integer>4</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -72,7 +72,7 @@
 		<key>photo</key>
 		<string>Nesvizh Castle</string>
 		<key>index</key>
-		<string>5</string>
+		<integer>5</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -84,7 +84,7 @@
 		<key>photo</key>
 		<string>The Mir Castle Complex</string>
 		<key>index</key>
-		<string>6</string>
+		<integer>6</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -96,7 +96,7 @@
 		<key>photo</key>
 		<string>Denali National Park</string>
 		<key>index</key>
-		<string>7</string>
+		<integer>7</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -108,7 +108,7 @@
 		<key>photo</key>
 		<string>Katmai National Park</string>
 		<key>index</key>
-		<string>8</string>
+		<integer>8</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -120,19 +120,19 @@
 		<key>photo</key>
 		<string>Kenai Fjords National Park</string>
 		<key>index</key>
-		<string>9</string>
+		<integer>9</integer>
 	</dict>
 	<dict>
 		<key>name</key>
 		<string>Joshua Tree National Park</string>
 		<key>category</key>
-		<string>In City</string>
+		<string>Visit In The City</string>
 		<key>description</key>
 		<string>Description of the Joshua Tree National Park</string>
 		<key>photo</key>
 		<string>Joshua Tree National Park</string>
 		<key>index</key>
-		<string>10</string>
+		<integer>10</integer>
 	</dict>
 	<dict>
 		<key>name</key>
@@ -144,7 +144,7 @@
 		<key>photo</key>
 		<string>Sequoia National Park</string>
 		<key>index</key>
-		<string>11</string>
+		<integer>11</integer>
 	</dict>
 </array>
 </plist>

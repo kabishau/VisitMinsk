@@ -80,7 +80,7 @@
                                 <rect key="frame" x="0.0" y="270" width="375" height="397"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="130" id="ou3-LX-dXd" customClass="PlaceCategoryTableViewCell" customModule="VisitMinsk" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Cell" rowHeight="130" id="ou3-LX-dXd" customClass="SectionTableViewCell" customModule="VisitMinsk" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="130"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="ou3-LX-dXd" id="RXf-di-FOk">
@@ -98,7 +98,7 @@
                                                         <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
                                                     </collectionViewFlowLayout>
                                                     <cells>
-                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="18a-SW-UiN" customClass="PlaceCollectionViewCell" customModule="VisitMinsk" customModuleProvider="target">
+                                                        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="CollectionCell" id="18a-SW-UiN" customClass="CollectionViewCell" customModule="VisitMinsk" customModuleProvider="target">
                                                             <rect key="frame" x="0.0" y="5" width="160" height="120"/>
                                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                             <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO">
@@ -109,18 +109,30 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </imageView>
+                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9y-mK-cwv">
+                                                                        <rect key="frame" x="5" y="100" width="150" height="14.5"/>
+                                                                        <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
+                                                                        <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                                                        <nil key="highlightedColor"/>
+                                                                    </label>
                                                                 </subviews>
                                                             </view>
                                                             <color key="backgroundColor" red="0.80000000000000004" green="0.80000000000000004" blue="0.80000000000000004" alpha="1" colorSpace="calibratedRGB"/>
+                                                            <constraints>
+                                                                <constraint firstAttribute="trailing" secondItem="C9y-mK-cwv" secondAttribute="trailing" constant="5" id="07M-CB-qkG"/>
+                                                                <constraint firstItem="C9y-mK-cwv" firstAttribute="leading" secondItem="18a-SW-UiN" secondAttribute="leading" constant="5" id="6a4-Jh-ke2"/>
+                                                                <constraint firstAttribute="bottom" secondItem="C9y-mK-cwv" secondAttribute="bottom" constant="5" id="Ps1-Ja-ZVc"/>
+                                                            </constraints>
                                                             <size key="customSize" width="160" height="120"/>
                                                             <connections>
                                                                 <outlet property="imageView" destination="rd7-0m-mhP" id="4WA-se-lje"/>
+                                                                <outlet property="titleLabel" destination="C9y-mK-cwv" id="0oN-XU-qYm"/>
                                                             </connections>
                                                         </collectionViewCell>
                                                     </cells>
                                                     <connections>
-                                                        <outlet property="dataSource" destination="ih5-As-uli" id="qX8-dM-erY"/>
-                                                        <outlet property="delegate" destination="ih5-As-uli" id="JP2-mJ-3Rs"/>
+                                                        <outlet property="dataSource" destination="ou3-LX-dXd" id="9rc-X7-QYx"/>
+                                                        <outlet property="delegate" destination="ou3-LX-dXd" id="IeG-BY-5I5"/>
                                                     </connections>
                                                 </collectionView>
                                             </subviews>
