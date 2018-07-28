@@ -25,6 +25,8 @@
 		6BEDD9AB20FFC7CD003CA67F /* Places.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Places.plist; sourceTree = "<group>"; };
 		6BEDD9AE20FFE0D5003CA67F /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		6BEDD9B320FFF6E5003CA67F /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
+		D401CBA4210C2A7F00608A15 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		D401CBA5210C2A8000608A15 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
 		D403003A20C8DA37009BBAA7 /* VisitMinsk.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VisitMinsk.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D403003D20C8DA37009BBAA7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D403003F20C8DA37009BBAA7 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
@@ -95,6 +97,15 @@
 			path = Resources;
 			sourceTree = "<group>";
 		};
+		D401CBA6210C2A8800608A15 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				D401CBA5210C2A8000608A15 /* OpenSans-Light.ttf */,
+				D401CBA4210C2A7F00608A15 /* OpenSans-Regular.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		D403003120C8DA37009BBAA7 = {
 			isa = PBXGroup;
 			children = (
@@ -114,6 +125,7 @@
 		D403003C20C8DA37009BBAA7 /* VisitMinsk */ = {
 			isa = PBXGroup;
 			children = (
+				D401CBA6210C2A8800608A15 /* Fonts */,
 				D403003D20C8DA37009BBAA7 /* AppDelegate.swift */,
 				6BEDD9B020FFF3F8003CA67F /* Cells */,
 				6BEDD9AD20FFE0AC003CA67F /* Views */,
