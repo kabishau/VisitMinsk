@@ -19,14 +19,14 @@ class DataSource {
     
 
     
-    func placeForItemAtIndexPath(_ indexPath: IndexPath) -> Place? {
-        if indexPath.section > 0 {
-            let minskPlaces = placesForSection(indexPath.section)
-            return minskPlaces[indexPath.item]
-        } else {
-            return places[indexPath.item]
-        }
-    }
+//    func placeForItemAtIndexPath(_ indexPath: IndexPath) -> Place? {
+//        if indexPath.section > 0 {
+//            let minskPlaces = placesForSection(indexPath.section)
+//            return minskPlaces[indexPath.item]
+//        } else {
+//            return places[indexPath.item]
+//        }
+//    }
     
     private func loadPlacesFromDisk() -> [Place] {
         
@@ -59,7 +59,7 @@ class DataSource {
         return []
     }
     
-    private func placesForSection(_ index: Int) -> [Place] {
+    func placesForSection(_ index: Int) -> [Place] {
         let section = sections[index]
         let placesInSection = places.filter { (place: Place) -> Bool in
             return place.category == section

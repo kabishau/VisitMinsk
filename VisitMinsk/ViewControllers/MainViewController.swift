@@ -42,6 +42,10 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath) as! SectionTableViewCell
         
+        let places = dataSource.placesForSection(indexPath.section)
+        cell.places = places
+        
+        
         return cell
 
     }
@@ -49,20 +53,25 @@ extension MainViewController: UITableViewDataSource, UITableViewDelegate {
 
 class SectionTableViewCell: UITableViewCell, UICollectionViewDataSource, UICollectionViewDelegate {
     
-    private let dataSource = DataSource()
+    var places: [Place]?
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.numberOfPlacesForSection(section)
+        
+        guard let places = places else { return 0 }
+        return places.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionCell", for: indexPath) as! CollectionViewCell
         
-        let items = dataSource.sections[indexPath.section]
+        if let places = places {
+            cell.imageView.image = UIImage(named: places[indexPath.item].photo)
+            cell.titleLabel.text = places[indexPath.item].name
+        }
         
-        cell.place = dataSource.placeForItemAtIndexPath(indexPath)
         return cell
     }
     

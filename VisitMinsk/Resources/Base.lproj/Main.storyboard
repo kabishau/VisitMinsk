@@ -109,6 +109,10 @@
                                                                         <rect key="frame" x="0.0" y="0.0" width="160" height="120"/>
                                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     </imageView>
+                                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2ml-dT-bTZ" customClass="GradientView" customModule="VisitMinsk" customModuleProvider="target">
+                                                                        <rect key="frame" x="0.0" y="92" width="160" height="28"/>
+                                                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                    </view>
                                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="C9y-mK-cwv">
                                                                         <rect key="frame" x="5" y="100" width="150" height="14.5"/>
                                                                         <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="12"/>
@@ -121,7 +125,11 @@
                                                             <constraints>
                                                                 <constraint firstAttribute="trailing" secondItem="C9y-mK-cwv" secondAttribute="trailing" constant="5" id="07M-CB-qkG"/>
                                                                 <constraint firstItem="C9y-mK-cwv" firstAttribute="leading" secondItem="18a-SW-UiN" secondAttribute="leading" constant="5" id="6a4-Jh-ke2"/>
+                                                                <constraint firstItem="2ml-dT-bTZ" firstAttribute="top" secondItem="C9y-mK-cwv" secondAttribute="top" constant="-8" id="C1g-1f-rg8"/>
+                                                                <constraint firstAttribute="trailing" secondItem="2ml-dT-bTZ" secondAttribute="trailing" id="OQH-sQ-SqK"/>
                                                                 <constraint firstAttribute="bottom" secondItem="C9y-mK-cwv" secondAttribute="bottom" constant="5" id="Ps1-Ja-ZVc"/>
+                                                                <constraint firstAttribute="bottom" secondItem="2ml-dT-bTZ" secondAttribute="bottom" id="oal-p5-XRV"/>
+                                                                <constraint firstItem="2ml-dT-bTZ" firstAttribute="leading" secondItem="18a-SW-UiN" secondAttribute="leading" id="yrr-mk-0P7"/>
                                                             </constraints>
                                                             <size key="customSize" width="160" height="120"/>
                                                             <connections>
