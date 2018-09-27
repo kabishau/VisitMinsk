@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6BED1F78215D902F0030FB4E /* placesMinsk.json in Resources */ = {isa = PBXBuildFile; fileRef = 6BED1F77215D902F0030FB4E /* placesMinsk.json */; };
 		6BEDD9AC20FFC7CD003CA67F /* Places.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6BEDD9AB20FFC7CD003CA67F /* Places.plist */; };
 		6BEDD9AF20FFE0D5003CA67F /* GradientView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDD9AE20FFE0D5003CA67F /* GradientView.swift */; };
 		6BEDD9B420FFF6E5003CA67F /* DataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6BEDD9B320FFF6E5003CA67F /* DataSource.swift */; };
@@ -22,6 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6BED1F77215D902F0030FB4E /* placesMinsk.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = placesMinsk.json; sourceTree = "<group>"; };
 		6BEDD9AB20FFC7CD003CA67F /* Places.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Places.plist; sourceTree = "<group>"; };
 		6BEDD9AE20FFE0D5003CA67F /* GradientView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GradientView.swift; sourceTree = "<group>"; };
 		6BEDD9B320FFF6E5003CA67F /* DataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataSource.swift; sourceTree = "<group>"; };
@@ -54,6 +56,7 @@
 		6BEDD9AA20FFC772003CA67F /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				6BED1F77215D902F0030FB4E /* placesMinsk.json */,
 				6BEDD9AB20FFC7CD003CA67F /* Places.plist */,
 				D46D928120CF8B68009D1573 /* Place.swift */,
 				6BEDD9B320FFF6E5003CA67F /* DataSource.swift */,
@@ -195,6 +198,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				6BED1F78215D902F0030FB4E /* placesMinsk.json in Resources */,
 				D403004820C8DA39009BBAA7 /* LaunchScreen.storyboard in Resources */,
 				6BEDD9AC20FFC7CD003CA67F /* Places.plist in Resources */,
 				D403004520C8DA39009BBAA7 /* Assets.xcassets in Resources */,

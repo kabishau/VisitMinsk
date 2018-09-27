@@ -1,0 +1,88 @@
+{
+  "places": [
+    {
+      "index": 0,
+      "title": "Church Of Saint Simon and Helena",
+      "description": "The national Academic Grand Opere and Ballet Theatre of the Republic of Belarus is located in a park ...",
+      "category": "Visit In The City",
+      "imageNames": "Church Of Sains Simon and Helena"
+    },
+    {
+      "index": 1,
+      "title": "Stalin Line",
+      "description": "Description of the Stalin Line",
+      "category": "Visit Outside the City",
+      "imageNames": "Stalin Line"
+    },
+    {
+      "index": 2,
+      "title": "Holly Spirit",
+      "description": "Description of the Holly Spirit",
+      "category": "Visit In The City",
+      "imageNames": "Holly Spirit"
+    },
+    {
+      "index": 3,
+      "title": "National Opera and Balet Theater",
+      "description": "Description of the National Opera and Balet Theater",
+      "category": "Visit In The City",
+      "imageNames": "National Library"
+    },
+    {
+      "index": 4,
+      "title": "National Opera and Balet Theater",
+      "description": "Description of the National Opera and Balet Theater",
+      "category": "Visit In The City",
+      "imageNames": "National Opera and Balet Theater"
+    },
+    {
+      "index": 5,
+      "title": "Nesvizh Castle",
+      "description": "Description of the Nesvizh Castle",
+      "category": "Visit Outside the City",
+      "imageNames": "Nesvizh Castle"
+    },
+    {
+      "index": 6,
+      "title": "The Mir Castle Complex",
+      "description": "Description ot The Mir Castle Complex",
+      "category": "Visit Outside the City",
+      "imageNames": "The Mir Castle Complex"
+    },
+    {
+      "index": 7,
+      "title": "Denali National Park",
+      "description": "Description of the Denali National Park",
+      "category": "Food",
+      "imageNames": "Denali National Park"
+    },
+    {
+      "index": 8,
+      "title": "Katmai National Park",
+      "description": "Description of the Katmai National Park",
+      "category": "Food",
+      "imageNames": "Katmai National Park"
+    },
+    {
+      "index": 9,
+      "title": "Kenai Fjords National Park",
+      "description": "Description Kenai Fjords National Park",
+      "category": "Food",
+      "imageNames": "Kenai Fjords National Park"
+    },
+    {
+      "index": 10,
+      "title": "Joshua Tree National Park",
+      "description": "Description of the Joshua Tree National Park",
+      "category": "Food",
+      "imageNames": "Joshua Tree National Park"
+    },
+    {
+      "index": 11,
+      "title": "Sequoia National Park",
+      "description": "Description of the Sequoia National Park",
+      "category": "Food",
+      "imageNames": "Sequoia National Park"
+    }
+  ]
+}
