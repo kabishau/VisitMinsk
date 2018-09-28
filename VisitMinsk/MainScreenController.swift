@@ -1,6 +1,6 @@
 import UIKit
 
-private let reuseIdentifier = "Cell"
+private let cellId = "cellId"
 
 class MainScreenController: UICollectionViewController {
 
@@ -8,10 +8,12 @@ class MainScreenController: UICollectionViewController {
         super.viewDidLoad()
         
         collectionView?.backgroundColor = UIColor.white
+        
+        collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! CategoryCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
         return cell
     }
     
@@ -21,6 +23,7 @@ class MainScreenController: UICollectionViewController {
 }
 
 class CategoryCell: UICollectionViewCell {
+    // why init should be overriden
     override init(frame: CGRect) {
         super.init(frame: frame)
         setupView()
@@ -31,6 +34,6 @@ class CategoryCell: UICollectionViewCell {
     }
     
     func setupView() {
-        
+        backgroundColor = UIColor.red
     }
 }
