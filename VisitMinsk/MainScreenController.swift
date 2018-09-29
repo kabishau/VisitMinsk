@@ -1,6 +1,6 @@
 import UIKit
 
-private let cellId = "cellId"
+private let categoryCellId = "cellId"
 
 class MainScreenController: UICollectionViewController, UICollectionViewDelegateFlowLayout {
 
@@ -9,11 +9,11 @@ class MainScreenController: UICollectionViewController, UICollectionViewDelegate
         
         collectionView?.backgroundColor = UIColor.white
         
-        collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: cellId)
+        collectionView?.register(CategoryCell.self, forCellWithReuseIdentifier: categoryCellId)
     }
     
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: cellId, for: indexPath) as! CategoryCell
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: categoryCellId, for: indexPath) as! CategoryCell
         return cell
     }
     
