@@ -42,7 +42,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         
         // constraints with visual language ("H:|-18-[v0]-18-|" - with values, and "H:|[v0]|", "V:|[v0]|" without values)
         let views = ["view": placesCollectionView]
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-14-[view]-14-|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
     }
     
@@ -60,6 +60,11 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         // don't need to specify the view in height because it's in collection view cell and it has frame property
         return CGSize(width: 150, height: frame.height)
     }
+    
+    // margins for collection view
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLreayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 14, bottom: 0, right: 14)
+    }
 }
 
 class PlaceCell: UICollectionViewCell {
@@ -74,7 +79,19 @@ class PlaceCell: UICollectionViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // image thumb for place cells
+    let imageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = UIImage(named: "National Library")
+        imageView.contentMode = .scaleAspectFit
+        imageView.layer.cornerRadius = 16 // it looks like corner radius work only with .scaleAspectFill contentMode
+        imageView.layer.masksToBounds = true // require to make corner radius happen
+        return imageView
+    }()
+    
     func setupView() {
         backgroundColor = UIColor.black
+        addSubview(imageView)
+        imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
     }
 }
