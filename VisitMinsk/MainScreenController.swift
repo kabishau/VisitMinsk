@@ -23,7 +23,7 @@ class MainScreenController: UICollectionViewController, UICollectionViewDelegate
     
     // defines dimensions and spacing, requere delegate
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: view.frame.width, height: 150)
+        return CGSize(width: view.frame.width, height: 200)
     }
 }
 

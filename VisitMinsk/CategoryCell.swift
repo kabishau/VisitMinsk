@@ -14,6 +14,16 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         fatalError("init(coder:) has not been implemented")
     }
     
+    // label for category
+    let categoryNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "Visit In City"
+        label.font = UIFont.systemFont(ofSize: 16)
+        label.textColor = UIColor.white
+        label.translatesAutoresizingMaskIntoConstraints = false // because using visual constraints?
+        return label
+    }()
+    
     // creating collection view inside category cell
     let placesCollectionView: UICollectionView = {
         
@@ -30,9 +40,11 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
     }()
     
     func setupView() {
-        backgroundColor = UIColor.clear
+        
+        backgroundColor = UIColor.gray
         
         addSubview(placesCollectionView)
+        addSubview(categoryNameLabel)
         
         placesCollectionView.delegate = self
         placesCollectionView.dataSource = self
@@ -40,25 +52,35 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         // register collection view
         placesCollectionView.register(PlaceCell.self, forCellWithReuseIdentifier: placeCellId)
         
+        
+        //addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": categoryNameLabel]))
+        let views = ["categoryNameLabel": categoryNameLabel, ]
+        
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-34-[categoryNameLabel]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["categoryNameLabel": categoryNameLabel]))
+        
+        
+        
         // constraints with visual language ("H:|-18-[v0]-18-|" - with values, and "H:|[v0]|", "V:|[v0]|" without values)
-        let views = ["view": placesCollectionView]
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: views))
-    }
-    
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 5
+        //let views = ["view": placesCollectionView] - can be optimized this way?
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": placesCollectionView]))
+        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": placesCollectionView]))
+        
+        
+        
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: placeCellId, for: indexPath) as! PlaceCell
         return cell
     }
+
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 2
+    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // don't need to specify the view in height because it's in collection view cell and it has frame property
-        return CGSize(width: 150, height: frame.height)
+        return CGSize(width: 190, height: 170) // this is supposed to give a space for category label
     }
     
     // margins for collection view
@@ -89,9 +111,25 @@ class PlaceCell: UICollectionViewCell {
         return imageView
     }()
     
+    // title for the place cell
+    let placeNameLabel: UILabel = {
+        let label = UILabel()
+        label.text = "National Library"
+        label.font = UIFont.systemFont(ofSize: 14)
+        label.numberOfLines = 2
+        label.textColor = UIColor.white
+        label.textAlignment = .center
+        return label
+    }()
+    
     func setupView() {
         backgroundColor = UIColor.black
+        
         addSubview(imageView)
+        // it's easier to specify size and position this way instead of constraints
         imageView.frame = CGRect(x: 0, y: 0, width: frame.width, height: frame.width)
+        
+        addSubview(placeNameLabel)
+        placeNameLabel.frame = CGRect(x: 0, y: frame.height - 60, width: frame.width, height: 60)
     }
 }
