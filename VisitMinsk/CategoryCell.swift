@@ -20,8 +20,16 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         label.text = "Visit In City"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = UIColor.white
-        label.translatesAutoresizingMaskIntoConstraints = false // because using visual constraints?
+        label.translatesAutoresizingMaskIntoConstraints = false // not because of VFL, but why?
         return label
+    }()
+    
+    let seeAllButton: UIButton = {
+        let button = UIButton()
+        button.setTitle("See All", for: .normal)
+        button.backgroundColor = .green
+        button.translatesAutoresizingMaskIntoConstraints = false
+        return button
     }()
     
     // creating collection view inside category cell
@@ -45,6 +53,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         
         addSubview(placesCollectionView)
         addSubview(categoryNameLabel)
+        addSubview(seeAllButton)
         
         placesCollectionView.delegate = self
         placesCollectionView.dataSource = self
@@ -54,7 +63,11 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         
         
         //addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": categoryNameLabel]))
-        let views = ["categoryNameLabel": categoryNameLabel, ]
+        let views = [
+            "categoryNameLabel": categoryNameLabel,
+            "seeAllButton": seeAllButton,
+            "collectionView": placesCollectionView
+        ]
         
         addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-34-[categoryNameLabel]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["categoryNameLabel": categoryNameLabel]))
         
