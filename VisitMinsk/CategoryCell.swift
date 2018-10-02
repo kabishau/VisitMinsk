@@ -20,6 +20,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         label.text = "Visit In City"
         label.font = UIFont.systemFont(ofSize: 16)
         label.textColor = UIColor.white
+        label.backgroundColor = .blue
         label.translatesAutoresizingMaskIntoConstraints = false // not because of VFL, but why?
         return label
     }()
@@ -27,7 +28,7 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
     let seeAllButton: UIButton = {
         let button = UIButton()
         button.setTitle("See All", for: .normal)
-        button.backgroundColor = .green
+        button.backgroundColor = .brown
         button.translatesAutoresizingMaskIntoConstraints = false
         return button
     }()
@@ -61,23 +62,36 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         // register collection view
         placesCollectionView.register(PlaceCell.self, forCellWithReuseIdentifier: placeCellId)
         
+        var allConstraints: [NSLayoutConstraint] = []
         
-        //addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|-10-[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": categoryNameLabel]))
-        let views = [
+        let views: [String: Any] = [
             "categoryNameLabel": categoryNameLabel,
             "seeAllButton": seeAllButton,
-            "collectionView": placesCollectionView
+            "placesCollectionView": placesCollectionView
         ]
         
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|-34-[categoryNameLabel]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["categoryNameLabel": categoryNameLabel]))
+        let categoryNameVerticalConstraints = NSLayoutConstraint.constraints(
+            withVisualFormat: "V:|-[categoryNameLabel]-[placesCollectionView]-|",
+            //options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += categoryNameVerticalConstraints
         
+        let categoryNameHorizontalConstraints = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|-14-[categoryNameLabel]-40-[seeAllButton]-14-|",
+            //options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += categoryNameHorizontalConstraints
         
-        
-        // constraints with visual language ("H:|-18-[v0]-18-|" - with values, and "H:|[v0]|", "V:|[v0]|" without values)
-        //let views = ["view": placesCollectionView] - can be optimized this way?
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "H:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": placesCollectionView]))
-        addConstraints(NSLayoutConstraint.constraints(withVisualFormat: "V:|[view]|", options: NSLayoutConstraint.FormatOptions(), metrics: nil, views: ["view": placesCollectionView]))
-        
+        let placesCollectionViewHorizontalConstraints = NSLayoutConstraint.constraints(
+            withVisualFormat: "H:|[placesCollectionView]|",
+            //options: [],
+            metrics: nil,
+            views: views)
+        allConstraints += placesCollectionViewHorizontalConstraints
+
+        NSLayoutConstraint.activate(allConstraints)
         
         
     }
