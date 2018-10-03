@@ -49,18 +49,17 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
     }()
     
     func setupView() {
-        
         backgroundColor = UIColor.gray
-        
-        addSubview(placesCollectionView)
-        addSubview(categoryNameLabel)
-        addSubview(seeAllButton)
-        
-        placesCollectionView.delegate = self
-        placesCollectionView.dataSource = self
         
         // register collection view
         placesCollectionView.register(PlaceCell.self, forCellWithReuseIdentifier: placeCellId)
+        placesCollectionView.delegate = self
+        placesCollectionView.dataSource = self
+        
+        addSubview(categoryNameLabel)
+        addSubview(seeAllButton)
+        addSubview(placesCollectionView)
+        
         
         var allConstraints: [NSLayoutConstraint] = []
         
