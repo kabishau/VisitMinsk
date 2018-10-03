@@ -4,6 +4,15 @@ private let placeCellId = "PlaceCellId"
 
 class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
+    // asign the value to label after cell is dequeued
+    var category: Category? {
+        didSet {
+            if let name = category?.name {
+                categoryNameLabel.text = name
+            }
+        }
+    }
+    
     // why init should be overriden?
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -95,14 +104,19 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
         
     }
     
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        if let count = category?.places?.count {
+            return count
+        }
+        return 0
+    }
+    
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: placeCellId, for: indexPath) as! PlaceCell
+        cell.place = category?.places?[indexPath.item]
         return cell
     }
 
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 2
-    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         // don't need to specify the view in height because it's in collection view cell and it has frame property
@@ -117,6 +131,17 @@ class CategoryCell: UICollectionViewCell, UICollectionViewDelegate, UICollection
 
 class PlaceCell: UICollectionViewCell {
     
+    var place: Place? {
+        didSet {
+            if let name = place?.name {
+                placeNameLabel.text = name
+            }
+            if let image = place?.imageName {
+                imageView.image = UIImage(named: image)
+            }
+        }
+    }
+    
     // why init should be overriden?
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -130,7 +155,7 @@ class PlaceCell: UICollectionViewCell {
     // image thumb for place cells
     let imageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = UIImage(named: "National Library")
+        //imageView.image = UIImage(named: "National Library")
         imageView.contentMode = .scaleAspectFit
         imageView.layer.cornerRadius = 16 // it looks like corner radius work only with .scaleAspectFill contentMode
         imageView.layer.masksToBounds = true // require to make corner radius happen
@@ -140,7 +165,7 @@ class PlaceCell: UICollectionViewCell {
     // title for the place cell
     let placeNameLabel: UILabel = {
         let label = UILabel()
-        label.text = "National Library"
+        //label.text = "National Library"
         label.font = UIFont.systemFont(ofSize: 14)
         label.numberOfLines = 2
         label.textColor = UIColor.white
